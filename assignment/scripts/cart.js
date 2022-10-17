@@ -36,3 +36,20 @@ function empty(){
 //testing 'empty' function
 empty();
 console.log(basket);
+
+
+//stretch goal #4
+function removeItem(item){
+    if (basket.includes(item)){
+        let index = basket.indexOf(item);
+        let thing = basket.splice(index);
+        return thing;
+    }else {
+        return null;
+    }
+}
+
+//testing removeItem function
+addItem('jam');
+console.log(removeItem('jam'));
+console.log(removeItem('butter'));
